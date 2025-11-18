@@ -12,11 +12,8 @@
 
 ## 🔧 1. Installation
 ### Step 1: Clone This Repository
-### 步骤 1：克隆本项目
 ```bash
-# [Please insert your GitHub repository clone link here]
-# [请在此处插入你的 GitHub 仓库克隆链接]
-git clone [https://github.com/你的用户名/pythonProject.git](https://github.com/你的用户名/pythonProject.git)
+git clone (https://github.com/douzixx/CWDset_Model)
 cd pythonProject
 ```
 ### Step 2: Create the Conda Environment
@@ -41,7 +38,8 @@ pip install -r requirements.txt
 ```
 ## 2. Data Preparation
 
-1、The CWDset dataset is permanently archived on Zenodo: CWDset 数据集 (v1.0) 已被永久归档在 Zenodo： [Your Zenodo DOI Link Here, e.g., https://doi.org/10.5281/zenodo.XXXXXXX] [在此处插入你的 Zenodo DOI 链接, 例如: https://doi.org/10.5281/zenodo.XXXXXXX]
+1、Due to the large file size, the CWDset dataset (v1.0) is currently hosted on Google Drive (Official DOI will be provided upon publication):
+    https://drive.google.com/file/d/1bYEgSKtDWlKEjYFPf4ZDUr1bgHC-cAaB/view?usp=drive_link
 
 2、Download the dataset.
 
@@ -73,26 +71,24 @@ train  Models
 All 7 models are configured to train for 110,000 iterations and will only save the single best checkpoint based on val/mIoU.
 All models were trained in the mmlab_stable environment on a single NVIDIA RTX 4080 SUPER for 110,000 iterations.
 
-Example: Train BiSeNetV2: 例如，训练 BiSeNetV2:
+Example: Train BiSeNetV2: 
 ```bash
 python tools/train.py configs/bisenetv2_fcn_b4_110k_CWDset-512x512.py
 ```
 Testing (Evaluate mIoU) 
 You can evaluate mIoU using either the weights you trained yourself, or our provided pre-trained weights.
 
-Pre-trained Weights Location / 预训练权重地址: We provide the final benchmark weights for all 7 models, permanently archived at: 我们提供了所有 7 个模型的最终基准权重，它们被永久归档在：
-
-[LINK TO YOUR PRE-TRAINED WEIGHTS ON ZENODO OR GITHUB RELEASES] [请在此处插入你的预训练权重在 Zenodo 或 GitHub Releases 上的链接]
+Pre-trained Weights Location: We provide the final benchmark weights for all 7 models. During the review process, these can be downloaded from:
+https://drive.google.com/file/d/1o0KlEtDVnIrHqlXDKbDED3aj3OmTv6Yr/view?usp=drive_link
 
 Please download these weights (e.g., into a new pre-trained/ folder). 
 
-Example: Test BiSeNetV2 using our pre-trained weight: 示例：使用我们提供的预训练权重测试 BiSeNetV2：
+Example: Test BiSeNetV2 using our pre-trained weight: 
 ```bash
 # Usage: python tools/test.py [CONFIG_FILE] [CHECKPOINT_FILE]
-# 格式: python tools/test.py [配置文件] [权重文件]
 python tools/test.py configs/bisenetv2_fcn_b4_110k_CWDset-512x512.py pre-trained/bisenetv2_best_miou.pth
 ```
-Example: Test your self-trained BiSeNetV2 model: 示例：测试你自训练的 BiSeNetV2 模型：
+Example: Test your self-trained BiSeNetV2 model: 
 ```bash
 python tools/test.py configs/bisenetv2_fcn_b4_110k_CWDset-512x512.py work_dirs/bisenetv2_fcn_b4_110k_CWDset-512x512/best_val_mIoU_iter_XXXX.pth
 ```
