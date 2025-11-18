@@ -1,4 +1,4 @@
-# CWDset: CWDset: A Remote Sensing Dataset for Semantic Segmentation of Small-Scale Coal Waste Dumps
+#  CWDset: A Remote Sensing Dataset for Semantic Segmentation of Small-Scale Coal Waste Dumps
 
 This is the official code repository for the *Scientific Data* paper: **[A dataset of small-scale coal waste dumps in Shanxi Province, China from high-resolution satellite images]**.
 
