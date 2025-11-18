@@ -1,0 +1,10 @@
+# -----------------------------------------------------------------
+# Install these AFTER PyTorch & MMCV
+# -----------------------------------------------------------------
+mmengine==0.10.7
+mmsegmentation==1.2.2
+mmdet==3.3.0
+numpy<2.0
+opencv-python==4.8.1.78
+rasterio
+ftfy
