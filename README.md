@@ -84,7 +84,7 @@ Please download these weights (e.g., into a new pre-trained/ folder).
 Example: Test BiSeNetV2 using our pre-trained weight: 
 ```bash
 # Usage: python tools/test.py [CONFIG_FILE] [CHECKPOINT_FILE]
-python tools/test.py configs/bisenetv2_fcn_b4_110k_CWDset-512x512.py pre-trained/bisenetv2_best_miou.pth
+python tools/test.py configs/bisenetv2_fcn_b4_110k_CWDset-512x512.py pre-trained/bisenetv2.pth
 ```
 Example: Test your self-trained BiSeNetV2 model: 
 ```bash
