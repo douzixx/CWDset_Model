@@ -11,11 +11,9 @@
 ---
 
 ## 🔧 1. Installation
-### Step 1: Clone This Repository
-```bash
-git clone (https://github.com/douzixx/CWDset_Model)
-cd pythonProject
-```
+### Step 1: Download and Unzip Repository
+1. **Download ZIP:** Click the green **< > Code** button, and then select **Download ZIP**.
+2. **Rename and Prepare:** Unzip the downloaded file. 
 ### Step 2: Create the Conda Environment
 ```bash
 # 1. Create a clean Python 3.10 environment
