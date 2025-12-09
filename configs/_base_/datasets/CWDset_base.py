@@ -22,7 +22,7 @@ train_pipeline = [
 
 val_pipeline = [
     dict(type='LoadTiffImageFromFile', to_float32=True),
-    dict(type='LoadTiffAnnotations', reduce_zero_label=False), # 必须加载标签才能评估
+    dict(type='LoadTiffAnnotations', reduce_zero_label=False), 
     dict(type='PackSegInputs')
 ]
 
