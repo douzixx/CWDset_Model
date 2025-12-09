@@ -10,9 +10,7 @@ from mmseg.registry import RUNNERS
 import os.path as osp
 import sys
 sys.path.insert(0, osp.dirname(osp.dirname(osp.abspath(__file__))))
-# ----------------------------------------------------
 
-# ... 下面是 train.py 的其他原有代码 (import mmengine, main()...)
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a segmentor')
