@@ -4,13 +4,11 @@ from typing import Dict, Tuple, Optional, Union
 from mmcv.transforms import BaseTransform
 from mmseg.registry import TRANSFORMS
 
-# 导入 cv2 相关的库（最佳实践是放在文件顶部）
+
 from cv2 import resize, INTER_NEAREST, INTER_LINEAR, INTER_CUBIC
 
 
-# ---------------------------------
-# 1. TIF 图像/标签加载
-# ---------------------------------
+
 
 @TRANSFORMS.register_module()
 class LoadTiffImageFromFile(BaseTransform):
@@ -62,9 +60,7 @@ class LoadTiffAnnotations(BaseTransform):
         return results
 
 
-# ---------------------------------
-# 2. TIF 数据增强
-# ---------------------------------
+
 
 @TRANSFORMS.register_module()
 class RandomCropTiff(BaseTransform):
