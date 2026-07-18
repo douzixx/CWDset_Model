@@ -48,7 +48,7 @@ class LoadTiffAnnotations(BaseTransform):
     def transform(self, results: Dict) -> Dict:
         filename = results['seg_map_path']
         with rasterio.open(filename) as src:
-            gt_semantic_seg = src.read(1)  # 读取第一个波段
+            gt_semantic_seg = src.read(1)  
 
         if self.reduce_zero_label:
             gt_semantic_seg[gt_semantic_seg == 0] = 255
