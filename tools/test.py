@@ -49,9 +49,7 @@ def parse_args():
         help='job launcher')
     parser.add_argument(
         '--tta', action='store_true', help='Test time augmentation')
-    # When using PyTorch version >= 2.0.0, the `torch.distributed.launch`
-    # will pass the `--local-rank` parameter to `tools/train.py` instead
-    # of `--local_rank`.
+    
     parser.add_argument('--local_rank', '--local-rank', type=int, default=0)
     args = parser.parse_args()
     if 'LOCAL_RANK' not in os.environ:
@@ -84,13 +82,13 @@ def trigger_visualization_hook(cfg, args):
 def main():
     args = parse_args()
 
-    # load config
+    
     cfg = Config.fromfile(args.config)
     cfg.launcher = args.launcher
     if args.cfg_options is not None:
         cfg.merge_from_dict(args.cfg_options)
 
-    # work_dir is determined in this priority: CLI > segment in file > filename
+    
     if args.work_dir is not None:
         # update configs according to CLI args if args.work_dir is not None
         cfg.work_dir = args.work_dir
@@ -109,15 +107,15 @@ def main():
         cfg.tta_model.module = cfg.model
         cfg.model = cfg.tta_model
 
-    # add output_dir in metric
+   
     if args.out is not None:
         cfg.test_evaluator['output_dir'] = args.out
         cfg.test_evaluator['keep_results'] = True
 
-    # build the runner from config
+   
     runner = Runner.from_cfg(cfg)
 
-    # start testing
+   
     runner.test()
 
 
