@@ -36,8 +36,8 @@ pip install -r requirements.txt
 ```
 ## 2. Data Preparation
 
-1、Due to the large file size, the CWDset is currently hosted on Google Drive (Official DOI will be provided upon publication):
-    https://drive.google.com/file/d/1bYEgSKtDWlKEjYFPf4ZDUr1bgHC-cAaB/view?usp=sharing
+1、The CWDset is officially hosted on Zenodo. You can access and download the dataset via the following link:
+https://zenodo.org/records/22950251
 
 2、Download the dataset.
 
@@ -77,9 +77,9 @@ Testing (Evaluate mIoU)
 You can evaluate mIoU using either the weights you trained yourself, or our provided pre-trained weights.
 
 Pre-trained Weights Location: We provide the final benchmark weights for all 7 models. During the review process, these can be downloaded from:
-https://drive.google.com/file/d/1o0KlEtDVnIrHqlXDKbDED3aj3OmTv6Yr/view?usp=sharing.
+https://zenodo.org/records/22950251
 
-Please download these weights (e.g., into a new pre-trained/ folder). 
+Please download these weights. 
 
 Example: Test BiSeNetV2 using our pre-trained weight: 
 ```bash
